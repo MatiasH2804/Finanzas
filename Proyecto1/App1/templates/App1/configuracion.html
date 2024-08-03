@@ -1,0 +1,14 @@
+{% extends 'App1/base.html' %}
+
+{% load static %}
+
+{% block title %} Configuración {% endblock title %}
+
+{% block main %}
+    <h2>Configuración</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ mi_formulario.as_p }}
+        <input type="submit" value="Guardar">
+    </form>
+{% endblock main %}

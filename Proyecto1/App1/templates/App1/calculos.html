@@ -1,0 +1,17 @@
+{% extends 'App1/base.html' %}
+
+{% load static %}
+
+{% block title %} Cálculos {% endblock title %}
+
+{% block main %}
+    <h2>Realizar cálculos financieros</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h3>Ingreso</h3>
+        {{ ingreso_formulario.as_p }}
+        <h3>Gasto</h3>
+        {{ gasto_formulario.as_p }}
+        <input type="submit" value="Guardar">
+    </form>
+{% endblock main %}

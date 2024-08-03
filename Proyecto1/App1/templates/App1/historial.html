@@ -1,0 +1,14 @@
+{% extends 'App1/base.html' %}
+
+{% load static %}
+
+{% block title %} Historial {% endblock title %}
+
+{% block main %}
+    <h2>Historial de Transacciones</h2>
+    <ul>
+        {% for transaccion in transacciones %}
+            <li>{{ transaccion.fecha }} - {{ transaccion.descripcion }}: ${{ transaccion.monto }}</li>
+        {% endfor %}
+    </ul>
+{% endblock main %}
